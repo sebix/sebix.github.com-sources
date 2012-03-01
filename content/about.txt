@@ -1,0 +1,9 @@
+---
+title: Welcome
+author: sebix
+date: 01.02.2012, 00:00
+---
+
+Hi, I'm an Austrian pupil and hobby developer, see [projects](projects) for my current works.
+
+Here's my public-key: [download key](gpg-key-sebix.asc "for szebi@gmx.at")

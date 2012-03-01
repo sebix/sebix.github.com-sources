@@ -1,0 +1,11 @@
+<div class="posting">
+    <div class="postheader">
+        <h2 class="subject">
+            <a href="{{ path + permalink }}">{{ title }}</a>
+        </h2>
+        <span class="date">{{ date.strftime("%d.%m.%Y, %H:%M") }}</span>
+    </div>
+    <div class="postbody">
+        {{ content }}
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="posting">
+    <div class="postheader">
+        <h2 class="subject">
+            <a href="{{ path + permalink }}">{{ title }}</a>
+        </h2>
+        <span class="date">{{ date.strftime("%d.%m.%Y, %H:%M") }}</span>
+    </div>
+    <div class="postbody">
+        {{ content }}
+    </div>
+    <div class="postfooter">
+        {% if disqus_shortname and type == 'page' %}
+            <a class="floatright" href="{{ www_root + permalink }}#disqus_thread">Kommentieren</a>
+        {% endif %}
+        {% if 'tag' in views and tags %}
+            <p>tagged as
+                {% for link in tags | tagify -%}
+                    <a href="{{ path + link.href }}">{{ link.title }}</a>
+                    {%- if loop.revindex > 2 -%}
+                    ,
+                    {%- elif loop.revindex == 2 %}
+                    und
+                    {% endif %}
+                {% endfor %}
+            </p>
+        {% elif not draft %}
+            <p>not tagged</p>
+        {% endif %}
+    </div>
+    <div class="comments">
+        {%- if disqus_shortname and type == 'item' and not draft %}
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            var disqus_shortname = '{{ disqus_shortname }}'; // required: replace example with your forum shortname
+
+            // The following are highly recommended additional parameters. Remove the slashes in front to use.
+            var disqus_identifier = "{{ www_root + permalink }}";
+            var disqus_url = "{{ www_root + permalink }}";
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '{{ protocol }}://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>
+            <p>Please enable JavaScript to view the <a href="{{ protocol }}://disqus.com/?ref_noscript">comments powered by Disqus.</a></p>
+        </noscript>
+        <a href="{{ protocol }}://disqus.com" class="dsq-brlink">
+            blog comments powered by <span class="logo-disqus">Disqus</span>
+        </a>
+        {% endif -%}
+    </div>
+</div>

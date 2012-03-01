@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {%- if type != 'item' -%}
+      {{ sitename }}
+    {%- else -%}
+      {{ title }}
+    {%- endif -%}
+{% endblock %}
+
+{% block head %}
+    {{- super() }}
+    {%- if type == 'item' %}
+    <meta name="description" content="{{ description }}" />
+    <meta name="keywords" content="{{ tags | join(', ') }}" />
+    {%- endif -%}
+{% endblock %}
+
+{% block content %}
+    {{ entrylist }}
+    {% if type in ['tag', 'page'] %}
+        {% if prev %}
+            <a href="{{ path + prev }}" class="page floatright">
+            ältere Beiträge →
+            </a>
+        {% endif %}
+        {% if next %}
+            <a href="{{ path + next }}" class="page floatleft">
+            ← neuere Beiträge
+            </a>
+        {% endif %}
+    {%- endif  %}
+{% endblock %}
+
+{% block footer %}
+    {{ super() }}
+    {% if disqus_shortname and type == 'page' %}
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = '{{ disqus_shortname }}'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var s = document.createElement('script'); s.async = true;
+                s.type = 'text/javascript';
+                s.src = '{{ protocol }}://' + disqus_shortname + '.disqus.com/count.js';
+                (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+            }());
+        </script>
+        {% endif %}
+{% endblock %}

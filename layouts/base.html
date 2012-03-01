@@ -1,0 +1,75 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
+         "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    {% block head -%}
+    <title>{% block title %}{% endblock %}</title>
+    <meta http-equiv="Content-Type" content="text/xhtml; charset=utf-8" />
+    <meta http-equiv="content-language" content="de, en" />
+    <link media="all" href="{{ path + '/blog.css' }}" type="text/css" rel="stylesheet" />
+    <link href="/favicon.ico" rel="shortcut icon" />
+    <link href="{{ path + '/' }}" rel="home" />
+    <link href="{{ path + '/atom/' }}" type="application/atom+xml" rel="alternate" title="Atom-Feed" />
+    <link href="{{ path + '/rss/' }}" type="application/rss+xml" rel="alternate" title="RSS-Feed" />
+    {%- endblock %}
+</head>
+<body>
+	<div id="blogheader">
+		<div id="mainlinks">
+			<ul>
+				<li><a href="{{ path + '/' }}">blog</a></li>
+<!--	Searching for interesting content? Sorry :P	<li><a href="{{ path + '/articles/' }}">articles</a></li>-->
+				<li><a href="{{ path + '/guest-articles/' }}">guest articles</a></li>
+				<li><a href="{{ path + '/projects/' }}">projects</a></li>
+				<li><a href="{{ path + '/atom/' }}">feed</a></li>
+			</ul>
+		</div>
+		<div id="blogtitle">
+<img src="{{ path + '/img/part0.jpg' }}" />
+<img src="{{ path + '/img/part1.jpg' }}" />
+<img src="{{ path + '/img/part2.jpg' }}" />
+<img src="{{ path + '/img/part3.jpg' }}" />
+<img src="{{ path + '/img/part4.jpg' }}" />
+<img src="{{ path + '/img/part5.jpg' }}" />
+<img src="{{ path + '/img/part6.jpg' }}" />
+<img src="{{ path + '/img/part7.jpg' }}" />
+<img src="{{ path + '/img/part8.jpg' }}" />
+<img src="{{ path + '/img/part9.jpg' }}" />
+<img src="{{ path + '/img/part10.jpg' }}" />
+<img src="{{ path + '/img/part11.jpg' }}" />
+			<h1>
+				<a href="/" class="blogtitle">{{ sitename }}</a>
+			</h1>
+		</div>
+	</div>
+    <div id="blogbody">
+        {% block content -%}
+        {%- endblock %}
+    </div>
+    <div id="blogfooter">
+        {% block footer %}
+         <p>
+                hosted by <a href="https://github.com">github</a></br />
+                powerd by <a href="https://github.com/sebix/acrylamid">acrylamid</a></br />
+            </p>
+        <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+            <img src="/img/cc.png" alt="by-nc-sa" />
+        </a>
+        {% endblock %}
+	</div>
+<!-- Piwik --> 
+<script type="text/javascript">
+	var pkBaseURL = (("https:" == document.location.protocol) ? "https://62.113.209.36/piwik/" : "http://62.113.209.36/piwik/");
+	document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+	</script><script type="text/javascript">
+	try {
+	var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+	piwikTracker.trackPageView();
+	piwikTracker.enableLinkTracking();
+	} catch( err ) {}
+</script>
+<noscript><img src="http://62.113.209.36/piwik/piwik.php?idsite=1" style="border:0" alt="" /></noscript>
+<!-- End Piwik Tracking Code -->
+</body>
+</html>
