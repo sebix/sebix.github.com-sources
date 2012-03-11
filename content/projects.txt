@@ -55,6 +55,6 @@ It uses the [official API](http://developer.jamendo.com/en/wiki/Musiclist2Api) o
 ## [Batch-test your programs](https://gist.github.com/1086477) <span style="float:right; font-size:0.8em">Bash</span>
 
 This script executes one given program with a bunch of input files and compares the output with the solution-files (if given).
-Very usefull when training for the [Olymopiad in Informatics](http://ioinformatics.org/index.shtml), which provides huge testdata for every problem.
+Very usefull when training for the [Olympiad in Informatics](http://ioinformatics.org/index.shtml), which provides huge testdata for every problem.
 
 [and others](https://gist.github.com/sebix)

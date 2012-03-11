@@ -15,7 +15,7 @@ Informatics
 German
 ------
 
-- Sciencblogs.de/von_bits_und_bytes/
+- Scienceblogs.de/von_bits_und_bytes/
 
   - `Gastbeitrag: vierter Programmierwettbewerb des freien Magazins und Catalysts Coding Contest '11 <http://www.scienceblogs.de/von_bits_und_bytes/2011/10/gastbeitrag-vierter-programmierwettbewerb-des-freien-magazins-und-catalysts-coding-contest-11.php>`_
 
@@ -29,3 +29,5 @@ German
 ------
 
 - Pixelsophie.de
+
+  - `Einführung in Vektorgrafiken <http://www.pixelsophie.de/2013/02/vektorgrafiken-einfuehrung/>`_
