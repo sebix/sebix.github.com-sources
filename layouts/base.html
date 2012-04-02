@@ -7,39 +7,39 @@
     <title>{% block title %}{% endblock %}</title>
     <meta http-equiv="Content-Type" content="text/xhtml; charset=utf-8" />
     <meta http-equiv="content-language" content="de, en" />
-    <link media="all" href="{{ path + '/blog.css' }}" type="text/css" rel="stylesheet" />
+    <link media="all" href="{{ env.path + '/blog.css' }}" type="text/css" rel="stylesheet" />
     <link href="/favicon.ico" rel="shortcut icon" />
-    <link href="{{ path + '/' }}" rel="home" />
-    <link href="{{ path + '/atom/' }}" type="application/atom+xml" rel="alternate" title="Atom-Feed" />
-    <link href="{{ path + '/rss/' }}" type="application/rss+xml" rel="alternate" title="RSS-Feed" />
+    <link href="{{ env.path + '/' }}" rel="home" />
+    <link href="{{ env.path + '/atom/' }}" type="application/atom+xml" rel="alternate" title="Atom-Feed" />
+    <link href="{{ env.path + '/rss/' }}" type="application/rss+xml" rel="alternate" title="RSS-Feed" />
     {%- endblock %}
 </head>
 <body>
 	<div id="blogheader">
 		<div id="mainlinks">
 			<ul>
-				<li><a href="{{ path + '/' }}">blog</a></li>
-<!--	Searching for interesting content? Sorry :P	<li><a href="{{ path + '/articles/' }}">articles</a></li>-->
-				<li><a href="{{ path + '/guest-articles/' }}">guest articles</a></li>
-				<li><a href="{{ path + '/projects/' }}">projects</a></li>
-				<li><a href="{{ path + '/atom/' }}">feed</a></li>
+				<li><a href="{{ env.path + '/' }}">blog</a></li>
+<!--	Searching for interesting content? Sorry :P	<li><a href="{{ env.path + '/articles/' }}">articles</a></li>-->
+				<li><a href="{{ env.path + '/guest-articles/' }}">guest articles</a></li>
+				<li><a href="{{ env.path + '/projects/' }}">projects</a></li>
+				<li><a href="{{ env.path + '/atom/' }}">feed</a></li>
 			</ul>
 		</div>
 		<div id="blogtitle">
-<img src="{{ path + '/img/part0.jpg' }}" />
-<img src="{{ path + '/img/part1.jpg' }}" />
-<img src="{{ path + '/img/part2.jpg' }}" />
-<img src="{{ path + '/img/part3.jpg' }}" />
-<img src="{{ path + '/img/part4.jpg' }}" />
-<img src="{{ path + '/img/part5.jpg' }}" />
-<img src="{{ path + '/img/part6.jpg' }}" />
-<img src="{{ path + '/img/part7.jpg' }}" />
-<img src="{{ path + '/img/part8.jpg' }}" />
-<img src="{{ path + '/img/part9.jpg' }}" />
-<img src="{{ path + '/img/part10.jpg' }}" />
-<img src="{{ path + '/img/part11.jpg' }}" />
+<img src="{{ env.path + '/img/part0.jpg' }}" />
+<img src="{{ env.path + '/img/part1.jpg' }}" />
+<img src="{{ env.path + '/img/part2.jpg' }}" />
+<img src="{{ env.path + '/img/part3.jpg' }}" />
+<img src="{{ env.path + '/img/part4.jpg' }}" />
+<img src="{{ env.path + '/img/part5.jpg' }}" />
+<img src="{{ env.path + '/img/part6.jpg' }}" />
+<img src="{{ env.path + '/img/part7.jpg' }}" />
+<img src="{{ env.path + '/img/part8.jpg' }}" />
+<img src="{{ env.path + '/img/part9.jpg' }}" />
+<img src="{{ env.path + '/img/part10.jpg' }}" />
+<img src="{{ env.path + '/img/part11.jpg' }}" />
 			<h1>
-				<a href="/" class="blogtitle">{{ sitename }}</a>
+				<a href="/" class="blogtitle">{{ conf.sitename }}</a>
 			</h1>
 		</div>
 	</div>

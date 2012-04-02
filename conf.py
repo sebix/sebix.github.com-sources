@@ -25,3 +25,4 @@ VIEWS = {
 
 PERMALINK_FORMAT = '/:year/:slug/index.html'
 DATE_FORMAT = '%d.%m.%Y, %H:%M'
+LANG = "C"
