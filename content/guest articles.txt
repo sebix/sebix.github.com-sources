@@ -5,29 +5,18 @@ draft: True
 permalink: /guest-articles/
 tags: [external]
 date: 31.01.2012, 14:56
-filters: rest
 ---
 
-===========
-Informatics
-===========
+h1. Informatics
 
-German
-------
+h2. Scienceblogs.de: "Von Bits und Bytes":http://www.scienceblogs.de/von_bits_und_bytes/ (German)
 
-- Scienceblogs.de/von_bits_und_bytes/
+* "Gastbeitrag: vierter Programmierwettbewerb des freien Magazins und Catalysts Coding Contest '11":http://www.scienceblogs.de/von_bits_und_bytes/2011/10/gastbeitrag-vierter-programmierwettbewerb-des-freien-magazins-und-catalysts-coding-contest-11.php (03.10.2011)
+* "Gastbeitrag: Bericht von der IOI 2011":http://www.scienceblogs.de/von_bits_und_bytes/2011/08/gastbeitrag-bericht-von-der-ioi-2011.php (23.08.2011)
 
-  - `Gastbeitrag: vierter Programmierwettbewerb des freien Magazins und Catalysts Coding Contest '11 <http://www.scienceblogs.de/von_bits_und_bytes/2011/10/gastbeitrag-vierter-programmierwettbewerb-des-freien-magazins-und-catalysts-coding-contest-11.php>`_
+h1. Graphics
 
-  - `Gastbeitrag: Bericht von der IOI 2011 <http://www.scienceblogs.de/von_bits_und_bytes/2011/08/gastbeitrag-bericht-von-der-ioi-2011.php>`_
+h2. "Pixelsophie.de":http://www.pixelsophie.de/ (German)
 
-========
-Graphics
-========
-
-German
-------
-
-- Pixelsophie.de
-
-  - `Einführung in Vektorgrafiken <http://www.pixelsophie.de/2013/02/vektorgrafiken-einfuehrung/>`_
+* "Vektorgrafiken mit Inkscape":http://www.pixelsophie.de/2012/04/vektorgrafiken-inkscape/ (05.04.2012)
+* "Einführung in Vektorgrafiken":http://www.pixelsophie.de/2013/02/vektorgrafiken-einfuehrung/ (05.03.2012)

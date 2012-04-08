@@ -6,8 +6,8 @@
     {% block head -%}
     <title>{% block title %}{% endblock %}</title>
     <meta http-equiv="Content-Type" content="text/xhtml; charset=utf-8" />
-    <meta http-equiv="content-language" content="de, en" />
-    <link media="all" href="{{ env.path + '/blog.css' }}" type="text/css" rel="stylesheet" />
+    <meta http-equiv="content-language" content="{{ conf.lang }}" />
+    <link media="all" href="{{ env.path + '/style.css' }}" type="text/css" rel="stylesheet" />
     <link href="/favicon.ico" rel="shortcut icon" />
     <link href="{{ env.path + '/' }}" rel="home" />
     <link href="{{ env.path + '/atom/' }}" type="application/atom+xml" rel="alternate" title="Atom-Feed" />
@@ -26,18 +26,18 @@
 			</ul>
 		</div>
 		<div id="blogtitle">
-<img src="{{ env.path + '/img/part0.jpg' }}" />
-<img src="{{ env.path + '/img/part1.jpg' }}" />
-<img src="{{ env.path + '/img/part2.jpg' }}" />
-<img src="{{ env.path + '/img/part3.jpg' }}" />
-<img src="{{ env.path + '/img/part4.jpg' }}" />
-<img src="{{ env.path + '/img/part5.jpg' }}" />
-<img src="{{ env.path + '/img/part6.jpg' }}" />
-<img src="{{ env.path + '/img/part7.jpg' }}" />
-<img src="{{ env.path + '/img/part8.jpg' }}" />
-<img src="{{ env.path + '/img/part9.jpg' }}" />
-<img src="{{ env.path + '/img/part10.jpg' }}" />
-<img src="{{ env.path + '/img/part11.jpg' }}" />
+<img src="{{ env.path + '/img/part0.jpg' }}" alt="" />
+<img src="{{ env.path + '/img/part1.jpg' }}" alt="" />
+<img src="{{ env.path + '/img/part2.jpg' }}" alt="" />
+<img src="{{ env.path + '/img/part3.jpg' }}" alt="" />
+<img src="{{ env.path + '/img/part4.jpg' }}" alt="" />
+<img src="{{ env.path + '/img/part5.jpg' }}" alt="" />
+<img src="{{ env.path + '/img/part6.jpg' }}" alt="" />
+<img src="{{ env.path + '/img/part7.jpg' }}" alt="" />
+<img src="{{ env.path + '/img/part8.jpg' }}" alt="" />
+<img src="{{ env.path + '/img/part9.jpg' }}" alt="" />
+<img src="{{ env.path + '/img/part10.jpg' }}" alt="" />
+<img src="{{ env.path + '/img/part11.jpg' }}" alt="" />
 			<h1>
 				<a href="/" class="blogtitle">{{ conf.sitename }}</a>
 			</h1>
@@ -70,7 +70,7 @@
 	piwikTracker.enableLinkTracking();
 	} catch( err ) {}
 </script>
-<noscript><img src="http://62.113.209.36/piwik/piwik.php?idsite=1" style="border:0" alt="" /></noscript>
+<noscript><p style="display:none"><img src="http://62.113.209.36/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
 <!-- End Piwik Tracking Code -->
 </body>
 </html>
