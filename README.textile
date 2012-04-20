@@ -1,0 +1,15 @@
+h1. sebix.github.com sources
+
+In this repo you can find the sources of my homepage
+"sebix.github.com":http://sebix.github.com/.
+
+The output created by "acrylamid":https://github.com/sebix/acrylamid can be found
+in "another repo":https://github.com/sebix/sebix.github.com.
+
+So this repo is for demonstration purposes, so feel free to browse it and you'll be amazed what is possible with "acrylamid":https://github.com/sebix/acrylamid!
+
+* *content/* source files for all texts
+* *layouts/* files for the layout and other static files (images and style-informations) which have to be in output/
+* *conf.py* Configuration
+
+For compiling the current version of acrylamid is highly commended.
