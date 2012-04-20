@@ -18,7 +18,7 @@ VIEWS = {
     '/:year/:slug/': {'filters': ['h1'], 'view': 'entry'},
     '/atom/': {'filters': ['h2'], 'view': 'atom'},
     '/rss/': {'filters': ['h2'], 'view': 'rss'},
-    '/articles/': {'view': 'articles'},
+    '/articles-chrono/': {'view': 'articles'},
     '/atom/full': {'filters': ['h2'], 'view': 'atom', 'num_entries': 1000},
     '/tag/:name/': {'filters': ['h1', 'summarize'], 'view':'tag',
                    'pagination': '/tag/:name/:num'},
@@ -26,8 +26,7 @@ VIEWS = {
 
 PERMALINK_FORMAT = '/:year/:slug/index.html'
 DATE_FORMAT = '%d.%m.%Y, %H:%M'
-LANG = "en-us"
-HYPHENATE = 5
+LANG = "en_US"
 
 DEPLOYMENT = {
 	"ls": "ls",
@@ -37,5 +36,5 @@ DEPLOYMENT = {
 	'rm': 'rm -r %s/2012/ %s/articles/ %s/atom/ %s/guest-articles/ %s/projects/ %s/rss %s/tag/ %s/index.html',
 }
 
-OUTPUT_IGNORE = ['files/', 'img/', 'favicon.ico', 'style.css', '.*']
+OUTPUT_IGNORE = ['files/', 'img/', 'favicon.ico', 'style.css', '.*', '.*/']
 ACRONYMS_FILE = 'layouts/acronyms.txt'
