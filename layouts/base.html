@@ -19,13 +19,16 @@
 		<div id="mainlinks">
 			<ul>
 				<li><a href="{{ env.path + '/' }}">blog</a></li>
-<!--	Searching for interesting content? Sorry :P	<li><a href="{{ env.path + '/articles/' }}">articles</a></li>-->
-				<li><a href="{{ env.path + '/guest-articles/' }}">guest articles</a></li>
+				<li><a href="{{ env.path + '/articles/' }}">articles</a></li>
 				<li><a href="{{ env.path + '/projects/' }}">projects</a></li>
-				<li><a href="{{ env.path + '/atom/' }}">feed</a></li>
+				<li><a href="{{ env.path + '/about/' }}">about</a></li>
 			</ul>
 		</div>
 		<div id="blogtitle">
+{% if entry is defined and entry.props.header is defined %}
+	{{ entry.props.header }}
+{% else %}
+<div>
 <img src="{{ env.path + '/img/part0.jpg' }}" alt="" />
 <img src="{{ env.path + '/img/part1.jpg' }}" alt="" />
 <img src="{{ env.path + '/img/part2.jpg' }}" alt="" />
@@ -38,6 +41,8 @@
 <img src="{{ env.path + '/img/part9.jpg' }}" alt="" />
 <img src="{{ env.path + '/img/part10.jpg' }}" alt="" />
 <img src="{{ env.path + '/img/part11.jpg' }}" alt="" />
+</div>
+{% endif %}
 			<h1>
 				<a href="/" class="blogtitle">{{ conf.sitename }}</a>
 			</h1>
