@@ -1,15 +1,18 @@
 {%- macro render_item(env, conf, entry) -%}
     <entry>
         <title>{{ entry.title | escape }}</title>
-        <link rel="alternate" type="text/html" href="{{ conf.www_root + entry.permalink }}" />
-        <id>tag:{{ env.netloc + env.path }},{{ entry.date.strftime('%Y-%m-%d') }}:{{ entry.permalink.rstrip('/') }}</id>
+        <link rel="alternate" type="text/html" href="{{ conf.www_root + entry.permalink }}?pk_campaign=atom" />
+        <id>tag:{{ env.netloc + env.path }},{{ entry.date.strftime('%Y-%m-%d') }}:{{ entry.permalink.rstrip('/') }}-atom</id>
         <updated>{{ entry.date.strftime('%Y-%m-%dT%H:%M:%SZ') }}</updated>
         <author>
             <name>{{ entry.author }}</name>
             <uri>{{ conf.www_root + '/' }}</uri>
             <email>{{ entry.email }}</email>
         </author>
-        <content type="html">{{ entry.content | escape }}</content>
+        <content type="html">
+        {{ entry.content | escape }}
+        <img src="http://62.113.209.36/piwik/piwik.php?idsite=1" style="border:0" alt="" />
+        </content>
     </entry>
 {%- endmacro -%}
 <?xml version="1.0" encoding="utf-8"?>

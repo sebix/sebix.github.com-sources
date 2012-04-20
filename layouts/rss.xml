@@ -1,10 +1,10 @@
 {%- macro render_item(env, conf, entry) -%}
     <item>
         <title>{{ entry.title | escape }}</title>
-        <link>{{ conf.www_root + entry.permalink }}</link>
+        <link>{{ conf.www_root + entry.permalink }}?pk_campaign=rss</link>
         <description>{{ entry.content | escape }}</description>
         <pubDate>{{ entry.date | rfc822 }}</pubDate>
-        <guid isPermaLink="false">tag:{{ env.netloc + env.path }},{{ entry.date.strftime('%Y-%m-%d') }}:{{ entry.permalink.rstrip('/') }}</guid>
+        <guid isPermaLink="false">tag:{{ env.netloc + env.path }},{{ entry.date.strftime('%Y-%m-%d') }}:{{ entry.permalink.rstrip('/') }}-rss</guid>
     </item>
 {%- endmacro -%}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
