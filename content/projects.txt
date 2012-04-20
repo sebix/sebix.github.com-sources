@@ -1,21 +1,27 @@
 ---
 title: Projects
 author: Sebastian Wagner
-draft: True
 permalink: /projects/
 tags: [projects]
+draft: True
 date: 31.01.2012, 14:56
 ---
 
 h1. pre-scientific work in physics <span style="float:right; font-size: 0.8em">LaTeX</span>
 
-<a href="/img/fba-title.png"><img src="/img/fba-title.png" style="float:left; width: 100px" /></a> I'm currently occupied in writing and finishing a work called "Fachbereichsarbeit" for my grammar school graduation. My thesis has to do with current developments and theses in the debate of the accelerating expansion of the universe and theories dealing with these topics. It gives also an overview on the history of all the observations and discussions that led us to the state of play.
+<a href="/img/fba-title.png"><img src="/img/fba-title.png" style="float:left; width: 100px" /></a> Until late February I was occupied in writing and finishing a work called "Fachbereichsarbeit" for my grammar school graduation. My thesis has to do with current developments and theses in the debate of the accelerating expansion of the universe and theories dealing with these topics. It gives also an overview on the history of all the observations and discussions that led us to the state of play.
 
-Due to this important long-term task, it's impossible for me to engage in other projects till the release.
+Due to my current long-term and time-consuming task, the Matura (Austrian grammar school graduation), it's impossible for me to engage in other projects by this time.
 
-h1. "Particle Zoo":https://github.com/sebix/particle-zoo <span style="float:right; font-size:0.8em">SVG</span>
+h1. "Particle Zoo":/particle-zoo/ <span style="float:right; font-size:0.8em">SVG</span>
 
 <a href="http://cloud.github.com/downloads/sebix/particle-zoo/particle-zoo.png"><img src="http://cloud.github.com/downloads/sebix/particle-zoo/particle-zoo.png" style="float:left; width: 100px" /></a>This is my try to visualize the particles of the physical standard-model, showing not only the names and groups, but also some data like mass and spin. I created it as part of my pre-scientific work mentioned above.
+
+"Go to the detailed description!":/particle-zoo/
+
+h1. "acrylamid":https://github.com/sebix/acrylamid <span style="float:right; font-size:0.8em">Python</span>
+
+acrylamid is a compiler for static blogs and homepages and very easy to set up, use and extend. It's a project of "posativ":http://posativ.org/ but I'm now deeply involved in the developement in conjunction with him.
 
 h1. "Litotex":https://github.com/Litotex/Litotex-0.8 <span style="float:right; font-size:0.8em">PHP</span>
 
@@ -27,13 +33,13 @@ h1. "Unity-Opera":https://github.com/sebix/Unity-Opera <span style="float:right;
 Unity-Opera is a small Python-Script that adds Unity integration to the Opera Webbrowser.
 Unity is the new Desktop environment of the very popular Linux distribution Ubuntu.
 
-Since I'm using Gnome2/3 instead of Unity I stopped working on it, but nevertheless the script behaves well.
+Since I'm using Gnome2/3 instead of Unity I stopped working on it, but nevertheless the script behaves well with current versions of Unity.
 
 "and others!":https://github.com/sebix
 
 h1. some gists
 
-Small and unremarkable programs that deserve more usage\!
+Small and unremarkable programs that deserve more usage!
 
 h2. "Jamendo-Downloader":https://gist.github.com/1181355 <span style="float:right; font-size:0.8em">Bash</span>
 
