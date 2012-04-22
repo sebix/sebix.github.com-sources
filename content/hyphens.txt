@@ -1,0 +1,44 @@
+---
+title: Automatic hyphenation
+author: Sebastian Wagner
+tags: [responsive design, browser, css3, webdesign]
+date: 15.04.2012, 17:46
+---
+
+h1. Reasons for full justification
+
+Some weeks ago I began to play around with full justification of texts beyond LaTeX. Fully justified texts are used by professional typesetters and they can be found in almost every newspaper. Full justification is there necessary, because otherwise the reader would loose the orientation between all the small columns. They also appear more and more in the Internet as it just looks more professional and is far easier to read, in particular when the paragraph widths are small (thinking of mobile devices and multi-columns in HTML5).
+
+h1. Responsive Design
+
+There's an important link to Responsive Webdesign as the justification depends essentially on the display-width. If a fully justified paragraph is hyphened with the usual hyphen @-@, it works only for a specific text/box-width. In Responsive Design, all texts should scale properly, so a "hard hyphen" @-@ is to my mind a very bad idea.
+
+Some time ago a found a website of a professional marketing group which had a short (fully justified) paragraph at the top of their homepage. But they used just a normal hyphen @-@, which results in ugly white spaces between the words when zooming in/out. This is of course not a good way to create justified paragraphs and can result in a bad impression!
+
+h1. Typography
+
+Above I mentioned already TeX, which has a great (maybe the best?) hyphenation algorithm. Anyway, it's the best open one ;-). This algorithm uses syllable division based on language-specific patterns. Of course there exist many exceptions to this common rules, but the TeX-algorithm is very well-engineered and fails very rare (in this cases you can help TeX by adding your own rules).
+
+A simple hyphenation algorithm with pattern-detection can be easily implemented, but I only want perfect solutions. So, professional setting programs have their (good) solutions and take their time to process all the data. So what are the solutions for the web?
+
+h1. Solutions for the Web
+
+The problem is that most Browser don't have syllable division algorithms implemented, so the developers and webdesigners have to take care about this issue. There exist several solutions which enable automatic hyphenation on the web. Some are JavaScripts, which generate the hyphenation at run-/render-time in the browser. In my opinion this is the worst idea to solve this problem as JavaScript is required and it may be more inefficient than other solutions (it has to process the text while rendering, which results in longer rendering times).
+
+Others generate the so-called "soft-hyphens" at run- or compile-time (on the server by a CGI-language or locally by static compilers), which are embedded in the HTML-sourcecode by the @&shy;@-code. These HTML-Codes are hints for the browser and signal them the syllable divisions. The Browser then knows where a in-word break is possible and justifies the paragraph perfectly depending on the block width. This method is used by "acrylamid":/projects/#acrylamid via filter and therefore also enabled on this homepage. It is the best method for the time being, because it is supported by all browsers! The only downside of the soft hyphens is, that the text is quite unreadable in the source code (semantic expressions are of course not affected).
+
+h2. CSS3
+
+The best news is an upcoming feature of CSS3, called @hyphens@. It enables automatic hyphenation algorithms in the browsers, so that they can finally do the work they have to do: display content properly. The feature is yet not fully implemented in every browser, so that browser-specific properties have to be used. Additionally the browsers may not support all languages yet.
+
+bc. body {
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+At the time being, the feature is not at all reliable implemented! The best way remains adding soft hyphens until every browser has a good hyphenation algorithm. Nevertheless I added this code to my stylesheet, maybe it is helpful for some renderings.
+
+The current state of art can be tested on a special (but private!) "test-page":http://meyerweb.com/eric/css/tests/css3/show.php?p=hyphens. The specification is - as usual - at W3.org in the section "CSS Text Level 3":http://www.w3.org/TR/css3-text/.
