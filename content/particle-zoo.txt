@@ -4,9 +4,7 @@ author: Sebastian Wagner
 permalink: /particle-zoo/
 tags: [projects, particle-zoo]
 date: 14.04.2012, 13:53
-filters: textile
 header: "<a href="https://github.com/sebix/particle-zoo/downloads" title="Click to open PDF"><img src="http://cloud.github.com/downloads/sebix/particle-zoo/particle-zoo.png" alt="The Particle Zoo - PNG" width="600px" /></a>"
-head: test
 ---
 
 h1. Get it!
