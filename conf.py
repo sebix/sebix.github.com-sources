@@ -10,7 +10,7 @@ EMAIL = 'info@example.org' # not used anywhere
 
 # hyphenate is needed for nice justification
 #FILTERS = ['markdown+codehilite(css_class=highlight)+mathml', 'hyphenate', 'typo', 'h1']
-FILTERS = ['textile', 'hyphenate+5', 'typo', 'h1']
+FILTERS = ['textile', 'hyphenate+5', 'typo', 'h1', 'metalogo']
 VIEWS = {
     '/': {'filters': ['summarize', 'h1'],
           'pagination': '/page/:num',
@@ -37,4 +37,5 @@ DEPLOYMENT = {
 }
 
 OUTPUT_IGNORE = ['files/', 'img/', 'favicon.ico', 'style.css', '.*', '.*/']
+ENTRIES_IGNORE = ['drafts/*']
 ACRONYMS_FILE = 'layouts/acronyms.txt'
