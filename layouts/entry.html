@@ -1,3 +1,4 @@
+{% if not '!gallery!' in entry.tags or env.type == "entry" %}
 <div class="posting">
     <div class="postheader">
         <h1 class="subject">
@@ -27,8 +28,8 @@
 <!--            <p>not tagged</p> -->
         {% endif %}
     </div>
+    {%- if conf.disqus_shortname and env.type == 'entry' and not entry.draft %}
     <div class="comments">
-        {%- if conf.disqus_shortname and env.type == 'entry' and not entry.draft %}
         <div id="disqus_thread"></div>
         <script type="text/javascript">
             var disqus_shortname = '{{ conf.disqus_shortname }}'; // required: replace example with your forum shortname
@@ -50,6 +51,20 @@
         <a href="{{ env.protocol }}://disqus.com" class="dsq-brlink">
             blog comments powered by <span class="logo-disqus">Disqus</span>
         </a>
-        {% endif -%}
+    </div>
+    {% endif -%}
+</div>
+{% else %}
+<div class="posting" style="background-image: url('{{ env.path + entry.preview }}'); background-position: {{ entry.left or "0" }}px {{ entry.top or "0" }}px">
+    <div class="postbody" style="width: {{ entry.width or "400" }}px; height: {{ entry.height or "400" }}px; top: {{ entry.top or "0" }}px; left: {{ entry.left or "0" }}px">
+        <a href="{{ env.path + entry.permalink }}"><img src="{{ env.path + entry.preview }}" alt="{{ entry.alt }}" style="width: {{ entry.width or "400" }}px; height: {{ entry.height or "400" }}px" /></a>
+    	<div class="postdesc">
+        <h1 class="subject">
+            <a href="{{ env.path + entry.permalink }}">{{ entry.title }}</a>
+        </h1>
+        <p class="date">{{ entry.date.strftime("%d.%m.%Y, %H:%M") }}</p>
+        {{ entry.content }}
+        </div>
     </div>
 </div>
+{% endif %}

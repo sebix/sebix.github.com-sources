@@ -1,0 +1,14 @@
+---
+title: River by Night
+author: sebix
+preview: /img/gallery/river_night-400.jpg
+image: /img/gallery/river_night.jpg
+tags: !gallery!
+width: 602
+height: 400
+top: 0
+left: -101
+---
+This heavy-grained shot of a small river was made around midnight during heavy rain with ISO 100 and 30s exposure.
+
+In the image development process I added 6 EV's which produced the grain and exactly these colors.

@@ -1,0 +1,34 @@
+body {
+	background: white;
+	text-align: justify;
+	font-size: 12pt;
+}
+
+#blogheader, #blogfooter {
+	text-align: center;
+}
+
+.postfooter {
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+}
+
+#mainlinks {
+	display: none;
+}
+
+a:link, a:visited {
+	color: #520;
+	background: transparent;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.postbody a:link:after, .postbody a:visited:after, #blogfooter a:link:after, #blogfooter a:visited:after {
+	content: " (" attr(href) ") ";
+	font-size: 90%;
+}
+
+.postbody a[href^="/"]:after, #blogfooter a[href^="/"]:after {
+	content: " (http://sebix.github.com" attr(href) ") ";
+}

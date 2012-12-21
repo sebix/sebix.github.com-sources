@@ -1,0 +1,14 @@
+---
+title: Path to the Bridge
+author: sebix
+preview: /img/gallery/thai_bridge-400.jpg
+image: /img/gallery/thai_bridge.jpg
+tags: !gallery!
+width: 400
+height: 602
+top: -101
+left: 0
+---
+This image was a lucky shot, made while driving with a open tram through the __Ancient City__, Samuthprakarn, Thailand.
+
+The straightness of the path to the small pavilion which is settled by two young girls in pink and the neat bicycle beside them create the nice atmosphere.

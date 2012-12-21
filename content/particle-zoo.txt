@@ -1,5 +1,5 @@
 ---
-title: Particle Zoo
+title: The Particle Zoo of Modern Physics
 author: Sebastian Wagner
 permalink: /particle-zoo/
 tags: [projects, particle-zoo]
