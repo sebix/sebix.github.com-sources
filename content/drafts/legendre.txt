@@ -1,0 +1,8 @@
+---
+title: The Legendre-Symbol - The computional way
+author: Sebastian Wagner
+tags: [responsive design, browser, css3, webdesign]
+date: 15.04.2012, 17:46
+---
+
+http://uk.answers.yahoo.com/question/index?qid=20090314084214AA9AnHf

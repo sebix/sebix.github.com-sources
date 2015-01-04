@@ -3,8 +3,8 @@ title: My Guest Articles
 author: Sebastian Wagner
 permalink: /articles/
 tags: [external]
-draft: True
-date: 31.01.2012, 14:56
+type: page
+date: 2012-01-31, 14:56
 ---
 
 View "chronological list of all articles":/articles-chrono/ on this homepage.

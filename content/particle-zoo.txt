@@ -3,7 +3,7 @@ title: The Particle Zoo of Modern Physics
 author: Sebastian Wagner
 permalink: /particle-zoo/
 tags: [projects, particle-zoo]
-date: 14.04.2012, 13:53
+date: 2012-04-14, 13:53
 header: "<a href="https://github.com/sebix/particle-zoo/downloads" title="Click to open PDF"><img src="http://cloud.github.com/downloads/sebix/particle-zoo/particle-zoo.png" alt="The Particle Zoo - PNG" width="600px" /></a>"
 ---
 
@@ -18,15 +18,15 @@ Click on image above or choose:
 
 h1. The overview has gone... and reappears!
 
-When beginning to focus my interest on modern physics as well as preparing for my thesis in physics for school I always lost the overview due to the huge mass of informations. Furthermore I was unable to find any good reference sheet or an overview about all the particles of the standard-model of modern phyics. So I decided in my distress to create my own one, therefore I would have to study the subject matter very deep and additionally it could help others.
+When beginning to focus my interest on modern physics as well as preparing for my thesis in physics for school I always lost the overview due to the huge mass of information. Furthermore I was unable to find any good reference sheet or an overview about all the particles of the standard-model of modern physics. So I decided in my distress to create my own one, therefore I would have to study the subject matter very deep and additionally it could help others.
 
 h1. The target of this cheatsheet
 
-My cheatsheet is meant to help upcoming and learning interested parties to ease their start in modern particle physics. The Cheatsheet is neither complete nor mathematically correct, what it is not meant to become! The particle zoo is intended for a kickstart, not as scientific reference.
+My cheatsheet is meant to help upcoming and learning interested parties to ease their start in modern particle physics. The Cheatsheet is neither complete nor mathematically correct, what it is not meant to become! The particle zoo is intended for a kick start, not as scientific reference.
 
 h1. The shown data
 
-I included only the data I was interested in, expecially basic properties like spin, mass, electric charge, lifetime and eventual subparticles. Structuring the individual particles in their typical groups, helped me a lot in understanding all the special relationships.
+I included only the data I was interested in, especially basic properties like spin, mass, electric charge, lifetime and eventual sub particles. Structuring the individual particles in their typical groups, helped me a lot in understanding all the special relationships.
 
 h1. Enhance it!
 

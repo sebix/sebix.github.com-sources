@@ -1,0 +1,46 @@
+---
+title: Responsive Design
+author: Sebastian Wagner
+tags: [responsive design, browser, webdesign]
+date: 15.04.2012, 17:46
+---
+
+Responsive Design is a really nice buzz word. But in my opinion 
+
+device-independent design
+
+h2. Scaling
+
+test-page:
+http://bricss.net/post/16538278376/simple-responsive-design-test-page?d8539860
+
+nice scaling: http://dotfiles.github.com/
+
+h2. Clean Code
+
+http://sgaul.de/2012/05/12/appell-fur-sauberes-html/
+
+h2. Media Queries
+
+http://www.heise.de/ix/artikel/Allen-recht-1058764.ht
+http://www.alistapart.com/articles/responsive-web-design/
+
+h2. Printing
+
+print.css
+http://www.alistapart.com/articles/goingtoprint/
+
+h2. Examples
+
+bc.
+	overflow: scroll | no-display;
+	background-size: 20%;
+
+(floating side-boxes!)
+
+h2. See also
+* https://en.wikipedia.org/wiki/Responsive_Web_Design
+* https://de.wikipedia.org/wiki/Responsive_Design
+* http://www.webdesignresponsive.de/ (german)
+
+Opera Bookmarks Entwicklung -> HTML -> Responsive Design

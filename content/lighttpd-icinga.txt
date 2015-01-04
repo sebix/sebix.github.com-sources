@@ -1,0 +1,57 @@
+---
+title: Icinga on Lighttpd and Wheezy
+author: Sebastian Wagner
+tags: [icinga, monitoring, webserver, sysadmin]
+date: 2014-01-02, 17:46
+---
+
+As I haven't found any working example configuration for running icinga on a sub domain with lighttpd, I will here present my working solution.
+First of all, we need to install the software itself:
+
+<pre>
+  $ apt-get install icinga icinga-doc
+</pre>
+
+We create the file @/etc/lighttpd/conf-available/50-icinga.conf@ to have a configuration which is easy en- and disable:
+<pre><code>
+$HTTP["host"] =~ "icinga.example.org" {
+	auth.backend = "htdigest"
+	auth.backend.htdigest.userfile = "/etc/lighttpd/icinga.htdigest"
+	auth.require = ( "/" => (
+		"method"  => "digest",
+		"realm"   => "icinga",
+		"require" => "valid-user" 
+		)
+	)
+
+	server.document-root = "/usr/share/icinga/htdocs"
+	alias.url += (
+		"/cgi-bin/icinga" => "/usr/lib/cgi-bin/icinga",
+		"/icinga/stylesheets" => "/etc/icinga/stylesheets/",
+		"/icinga" => "/usr/share/icinga/htdocs",
+		"/stylesheets" => "/etc/icinga/stylesheets/",
+	)
+
+	$HTTP["url"] =~ "^/cgi-bin/" {
+		dir-listing.activate = "disable" 
+		cgi.assign = (
+			".pl"  => "/usr/bin/perl",
+			".cgi" => "" 
+		)
+	}
+}
+</pre></code>
+
+Now we can activate the newly created config and two requirements for Lighty's config using:
+<pre>
+  $ lighty-enable-mod auth cgi icinga
+</pre>
+
+The *authentication is required by icinga* and it is highly encouraged not to use a common password and a common sub domain. If the web interface does not detect any user name, it will load the website, but the access to the data is restricted to valid users.
+
+Now we need to create the digest file, containing the user names and password-hashes. We can therefor use the program @htdigest@, provided by @apache2-utils@, which should have been installed as a dependency of icinga.
+<pre>
+  $ htdigest -c "/etc/lighttpd/icinga.htdigest" icinga icingaadmin
+</pre>
+
+For Icinga on Lighttpd using a sub directory, take a look at "Cyconet Blog: Running Icinga With Lighttpd on Debian Wheezy":http://blog.waja.info/2013/11/24/running-icinga-with-lighttpd-on-a-raspberry/

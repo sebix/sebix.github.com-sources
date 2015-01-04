@@ -1,0 +1,23 @@
+---
+title: Automatic hyphenation - The 2nd time
+author: Sebastian Wagner
+tags: [responsive design, browser, css3, webdesign]
+date: 15.04.2012, 17:46
+---
+
+h1. Languages differ
+
+Every language distinc, nothing new. 
+
+Problem: Language deklaration in documents. In HTML5 Language declaration is not explicitely recommended!
+Problem: Multiple languages on one page: Per-Tag-Definition, but Automatics? Twitter for example?
+
+http://praegnanz.de/weblog/diese-browser-silbentrennung
+
+https://developer.mozilla.org/en/CSS/hyphens
+
+http://dev.opera.com/articles/view/11-typography-on-the-web/
+
+h1. Problems in Implementations
+
+Search fails in Opera

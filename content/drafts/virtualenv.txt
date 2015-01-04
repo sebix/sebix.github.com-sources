@@ -1,0 +1,17 @@
+---
+title: Developing with virtualenv
+author: Sebastian Wagner
+tags: python virutalenv pip
+date: 15.04.2012, 17:46
+---
+
+bc.
+$ virtualenv sandbox/
+$ source sandbox/bin/activate
+
+bc.
+$ pip install ~/Developing/Python/my-repo/
+# OR without activated virtualenv
+$ ~/sandbox/bin/pip install ~/Developing/Python/my-repo/
+
+Now the binary or library in ~/sandbox/bin/my-repo is always available on the latest version

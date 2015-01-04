@@ -2,22 +2,22 @@
 title: Welcome
 author: sebix
 permalink: /about/
-draft: True
-date: 01.02.2012, 00:00
+type: page
+date: 2014-01-01, 00:00
 ---
 
-Hi, I'm an Austrian pupil near the end of my school carrier and hobby developer, see "projects":projects for my current work.
+Hi, I'm an Austrian student currently studying physics at the "technical university of Vienna":http://www.tuwien.ac.at.
 
 h1. Contact
 
-For contact you can send me an E-Mail to "szebi@gmx.at":mailto:szebi@gmx.at, my GPG-key is "here":/files/gpg-key-sebix.asc. The key is also available on several keyservers.
+For contact you can send me an E-Mail to "sebix@sebix.at":mailto:sebix@sebix.at, my GPG-key is "here":/files/gpg-key-sebix.asc. The key is also available on several keyservers.
 
-I'm also using Jabber at "sebix@jabber.ccc.de":xmpp:sebix@jabber.ccc.de, after adding me you can see the key-ID of my key for Jabber.
+I'm also using Jabber at "sebix@jabber.ccc.de":xmpp:sebix@jabber.ccc.de. I do support encrypted communications via GPG or OTR.
 
 h1. Credits
 
 This Blog and Homepage is powered by acrylamid and therefore made possible by "posativ":http://posativ.org/.
 
-The credits for the nice decoration in the background go to "Chrisdesign":https://openclipart.org/user-detail/Chrisdesign, who "published":https://openclipart.org/detail/166639/floral-by-chrisdesign this nice ClipArt on "OpenClipArt.org":https://openclipart.org/.
+The credits for the nice decoration in the background go to "Chrisdesign":https://openclipart.org/user-detail/Chrisdesign, who "published":https://openclipart.org/detail/166639/floral-by-chrisdesign this nice Clip Art on "OpenClipArt.org":https://openclipart.org/.
 
 All other images, illustrations and photographs are created by myself.

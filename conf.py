@@ -1,78 +1,107 @@
 # -*- encoding: utf-8 -*-
-# This is your config file.  Please write in a valid python syntax!
-# See http://acrylamid.readthedocs.org/en/latest/conf.py.html
+# This is your configuration file.  Please write valid python!
+# See http://posativ.org/acrylamid/conf.py.html
 
 SITENAME = 'sebix'
-WWW_ROOT = 'http://sebix.github.com/'
+WWW_ROOT = 'https://www.sebix.at/'
 
 AUTHOR = 'sebix'
-EMAIL = 'info@example.org' # not used anywhere
+EMAIL = 'sebix@sebix.at'
 
-# hyphenate is needed for nice justification
-#FILTERS = ['markdown+codehilite(css_class=highlight)+mathml', 'hyphenate', 'typo', 'h1']
-FILTERS = ['textile', 'hyphenate+5', 'typo', 'h1', 'metalogo']
+FILTERS = ['textile+codehilite(css_class=highlight)', 'hyphenate+5', 'typo',
+           'h1', 'metalogo']
+"""
 VIEWS = {
-    '/': {'filters': ['summarize', 'h1'],
+    "/:slug/": {"view": "page"},
+    '/': {'filters': ['summarize', 'h1'], # TODO: h1?
           'pagination': '/page/:num',
-          'view': 'index',
-          'condition': lambda e: '!gallery!' not in e.tags},
-    '/:year/:slug/': {'filters': ['h1'],
-        'view': 'entry',
-        'condition': lambda e: '!gallery!' not in e.tags},
+          'view': 'index'},
+    '/:year/:slug/': {'filters': ['h1'], # TODO: h1? {'views': ['entry', 'draft']},
+        'view': 'entry'},
     '/atom/': {'filters': ['h2'],
+        'view': 'atom'},
+    '/rss/': {'filters': ['h2', 'nohyphenate'],
+        'view': 'rss'},
+    '/articles-chrono/': {'view': 'articles'},
+    '/atom/': {'filters': ['h2', 'nohyphenate'],
         'view': 'atom',
-        'condition': lambda e: '!gallery!' not in e.tags},
-    '/rss/': {'filters': ['h2'],
-        'view': 'rss',
-        'condition': lambda e: '!gallery!' not in e.tags},
-    '/articles-chrono/': {'view': 'articles',
-        'condition': lambda e: '!gallery!' not in e.tags},
-    '/atom/full': {'filters': ['h2'],
-        'view': 'atom',
-        'num_entries': 1000,
-        'condition': lambda e: '!gallery!' not in e.tags},
-    '/tag/:name/': {'filters': ['h1', 'summarize'],
+        'num_entries': 1000},
+    '/tag/:name/': {'filters': ['h1', 'summarize'], # TODO: h1?
         'view':'tag',
-        'pagination': '/tag/:name/:num',
-        'condition': lambda e: '!gallery!' not in e.tags},
+        'pagination': '/tag/:name/:num'},
     "sitemap.xml": {"view": "Sitemap"},
-    "/gallery/" : {'view': 'index',
-        'pagination': '/gallery/:num/',
-#        'filters': ['intro'],
-        'condition': lambda e: '!gallery!' in e.tags},
-    '/gallery/:year/:slug/': {'filters': ['h1'],
+    }
+"""
+VIEWS = {
+    '/': {
+        'filters': ['summarize', 'h2'],
+        'pagination': '/page/:num',
+        'view': 'index',
+        'if': lambda e: '!gallery!' not in e.tags},
+    '/:year/:slug/': {
+        'filters': ['h2'],
         'view': 'entry',
-        'condition': lambda e: '!gallery!' in e.tags},
-    '/gallery/atom/': {'filters': ['h2'],
+        'if': lambda e: '!gallery!' not in e.tags},
+    '/atom/': {
+        'filters': ['h2'],
         'view': 'atom',
-        'condition': lambda e: '!gallery!' in e.tags},
-    '/gallery/rss/': {'filters': ['h2'],
+        'if': lambda e: '!gallery!' not in e.tags},
+    '/rss/': {
+        'filters': ['h2'],
         'view': 'rss',
-        'condition': lambda e: '!gallery!' in e.tags},
-    '/gallery/atom/full': {'filters': ['h2'],
+        'if': lambda e: '!gallery!' not in e.tags},
+    '/articles-chrono/': {
+        'view': 'articles',
+        'if': lambda e: '!gallery!' not in e.tags},
+    '/atom/full': {
+        'filters': ['h2'],
         'view': 'atom',
         'num_entries': 1000,
-        'condition': lambda e: '!gallery!' in e.tags},
-    '/gallery/tag/:name/': {'filters': ['h1', 'summarize'],
+        'if': lambda e: '!gallery!' not in e.tags},
+    '/tag/:name/': {
+        'filters': ['h2', 'summarize'],
         'view':'tag',
         'pagination': '/tag/:name/:num',
-        'condition': lambda e: '!gallery!' in e.tags},
+        'if': lambda e: '!gallery!' not in e.tags},
+    'sitemap.xml': {
+        'view': 'Sitemap'},
+    "/:slug/": {"view": "page"}
+#   '/gallery/' : {
+#        'view': 'index',
+#        'pagination': '/gallery/:num/',
+#        'if': lambda e: '!gallery!' in e.tags},
+#    '/gallery/:year/:slug/': {
+#        'filters': ['h1'],
+#        'view': 'entry',
+#        'if': lambda e: '!gallery!' in e.tags},
+#    '/gallery/atom/': {
+#        'filters': ['h2'],
+#        'view': 'atom',
+#        'if': lambda e: '!gallery!' in e.tags},
+#    '/gallery/rss/': {
+#        'filters': ['h2'],
+#        'view': 'rss',
+#        'if': lambda e: '!gallery!' in e.tags},
+#    '/gallery/atom/full': {
+#        'filters': ['h2'],
+#        'view': 'atom',
+#        'num_entries': 1000,
+#        'if': lambda e: '!gallery!' in e.tags},
+#    '/gallery/tag/:name/': {
+#        'filters': ['h1', 'summarize'],
+#        'view':'tag',
+#        'pagination': '/tag/:name/:num',
+#        'if': lambda e: '!gallery!' in e.tags},
     }
+
+THEME = 'layouts'
+DATE_FORMAT = '%Y-%m-%d, %H:%M'
 
 SUMMARIZE_LINK = '<span>&#8230; <a href="%s" class="continue">continue</a></span>'
 
 PERMALINK_FORMAT = '/:year/:slug/index.html'
-DATE_FORMAT = '%d.%m.%Y, %H:%M'
 LANG = "en_US.UTF-8"
 
-DEPLOYMENT = {
-	"ls": "ls",
-	"status": "cd %s && git status",
-	'diff': 'cd %s && git diff',
-	'push': 'cd %s && git push',
-#	'rm': 'rm -r %s/2012/ %s/articles/ %s/atom/ %s/guest-articles/ %s/projects/ %s/rss %s/tag/ %s/index.html',
-}
-
-OUTPUT_IGNORE = ['files/', 'img/', 'favicon.ico', 'css/', 'js/', '.*', '.*/']
-CONTENT_IGNORE = ['drafts/*', '.*']
+OUTPUT_IGNORE = ['files/', 'img/', 'favicon.ico', 'css/', 'js/', '.*', '.*/', '*~']
+CONTENT_IGNORE = ['drafts/*', '.*', '*~']
 ACRONYMS_FILE = 'layouts/acronyms.txt'

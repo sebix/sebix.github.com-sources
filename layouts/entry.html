@@ -1,10 +1,10 @@
 {% if not '!gallery!' in entry.tags or env.type == "entry" %}
 <div class="posting">
     <div class="postheader">
-        <h1 class="subject">
+        <h2 class="subject">
             <a href="{{ env.path + entry.permalink }}">{{ entry.title }}</a>
-        </h1>
-        <span class="date">{{ entry.date.strftime("%d.%m.%Y, %H:%M") }}</span>
+        </h2>
+        <span class="date">{{ entry.date.strftime("%Y-%m-%d, %H:%M") }}</span>
     </div>
     <div class="postbody">
         {{ entry.content }}
@@ -24,8 +24,6 @@
                     {% endif %}
                 {% endfor %}
             </p>
-        {% elif not entry.draft %}
-<!--            <p>not tagged</p> -->
         {% endif %}
     </div>
     {%- if conf.disqus_shortname and env.type == 'entry' and not entry.draft %}
@@ -56,14 +54,24 @@
 </div>
 {% else %}
 <div class="posting" style="background-image: url('{{ env.path + entry.preview }}'); background-position: {{ entry.left or "0" }}px {{ entry.top or "0" }}px">
+    {% if False %}
     <div class="postbody" style="width: {{ entry.width or "400" }}px; height: {{ entry.height or "400" }}px; top: {{ entry.top or "0" }}px; left: {{ entry.left or "0" }}px">
         <a href="{{ env.path + entry.permalink }}"><img src="{{ env.path + entry.preview }}" alt="{{ entry.alt }}" style="width: {{ entry.width or "400" }}px; height: {{ entry.height or "400" }}px" /></a>
+    {% else %}
+    <div class="postbody" style="width: {{ entry.width or "200" }}px; height: {{ entry.height or "200" }}px; top: {{ entry.top or "0" }}px; left: {{ entry.left or "0" }}px">
+    {% endif %}
     	<div class="postdesc">
+        {% if env.type == "entry" %}
         <h1 class="subject">
+        {% else %}
+        <h2 class="subject,imageoverlay">
+        {% endif %}
             <a href="{{ env.path + entry.permalink }}">{{ entry.title }}</a>
-        </h1>
-        <p class="date">{{ entry.date.strftime("%d.%m.%Y, %H:%M") }}</p>
+        </h2>
+        {% if env.type == "entry" %}
+        <span class="date">{{ entry.date.strftime("%Y-%m-%d, %H:%M") }}</span>
         {{ entry.content }}
+        {% endif %}
         </div>
     </div>
 </div>

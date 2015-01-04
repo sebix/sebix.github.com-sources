@@ -3,15 +3,36 @@ title: Projects
 author: Sebastian Wagner
 permalink: /projects/
 tags: [projects]
-draft: True
-date: 31.01.2012, 14:56
+type: page
+date: 2014-01-01, 14:56
 ---
+
+h1. photography and videography
+
+Since 2009 I'm accompanying public events of my meanwhile former school "BG/BRG Amstetten":http://www.bgamstetten.ac.at/. After the foundation of the society of graduates and friends of the BG/BRG Amstetten, the "Absolventenverein":http://absolventenverein.ostarrichi-gymnasium.at/ in 2012 I also started to document these events.
+
+Apart from this I'm also doing panoramas, Pseudo-HDRs and bulb exposures, yet only for private purpose.
+
+At the end of 2014 I also started with videography in cooperation with "davidblacher.at"://www.davidblacher.at.
+
+The software I'm using in post-production are "Darktable":http://www.darktable.org/, "Hugin":http://hugin.sourceforge.net/ and "Luminance HDR":http://qtpfsgui.sourceforge.net/, all of them are "free software":https://www.gnu.org/philosophy/free-sw.html.
+
+h1. server administration
+
+Since 2011 I'm maintaining my own server with web and mail services for me and some friends.
+Some of my personal goals is to come in touch with the current techniques, standards and software, getting a grasp of "how the internet works", and subsequently to decentralize the web by using more independent services.
+
+My personal focus lies on "Postfix":http://postfix.org/ and "lighttpd":https://www.lighttpd.net/.
+
+A project I am participating in and related to server administration is "bettercrypto.org":bettercrypto.org. The goal of this project is to raise the usage of strong cryptography where possible by providing ready-to-use configuration snippets for server software.
+
+h1. Linuxwochen Vienna
+
+Beginning in 2014 I engaged in the organization team of the Viennese conference "Linuxwochen Wien":http://linuxwochen.at/ and am now a core member. I also gave workshops for Hugin and darktable.
 
 h1. pre-scientific work in physics <span style="float:right; font-size: 0.8em">LaTeX</span>
 
-<a href="/img/fba-title.png"><img src="/img/fba-title.png" style="float:left; width: 100px" /></a> Until late February I was occupied in writing and finishing a work called "Fachbereichsarbeit" for my grammar school graduation. My thesis has to do with current developments and theses in the debate of the accelerating expansion of the universe and theories dealing with these topics. It gives also an overview on the history of all the observations and discussions that led us to the state of play.
-
-Due to my current long-term and time-consuming task, the Matura (Austrian grammar school graduation), it's impossible for me to engage in other projects by this time.
+<a href="/img/fba-title.png"><img src="/img/fba-title.png" style="float:left; width: 100px" /></a> Until late February 2012 I was occupied in writing and finishing a work called "Fachbereichsarbeit" for my grammar school graduation. My thesis has to do with current developments and theses in the debate of the accelerating expansion of the universe and theories dealing with these topics. It gives also an overview on the history of all the observations and discussions that led us to the state of play.
 
 h1. "Particle Zoo":/particle-zoo/ <span style="float:right; font-size:0.8em">SVG</span>
 
@@ -19,18 +40,9 @@ h1. "Particle Zoo":/particle-zoo/ <span style="float:right; font-size:0.8em">SVG
 
 "Go to the detailed description!":/particle-zoo/
 
-h1. "acrylamid":https://github.com/sebix/acrylamid <span style="float:right; font-size:0.8em">Python</span>
-
-acrylamid is a compiler for static blogs and homepages and very easy to set up, use and extend. It's a project of "posativ":http://posativ.org/ but I'm now deeply involved in the developement in conjunction with him.
-
-h1. "Litotex":https://github.com/Litotex/Litotex-0.8 <span style="float:right; font-size:0.8em">PHP</span>
-
-Litotex is a team work of the Litotex community of which I am part of. It's a PHP framework that has to be developped so far, so that the code is readable and the performance acceptable. The concepts of DRY and modulization are the aim of that project.
-And of course: It's meant to make fun developping (on) it.
-
 h1. "Unity-Opera":https://github.com/sebix/Unity-Opera <span style="float:right; font-size:0.8em">Python</span>
 
-Unity-Opera is a small Python-Script that adds Unity integration to the Opera Webbrowser.
+Unity-Opera is a small Python-Script that adds Unity integration to the Opera Web browser.
 Unity is the new Desktop environment of the very popular Linux distribution Ubuntu.
 
 Since I'm using Gnome2/3 instead of Unity I stopped working on it, but nevertheless the script behaves well with current versions of Unity.
@@ -47,6 +59,6 @@ This small Shell-Script can help you in enlarging your music repertoire! Just pa
 
 h2. "Batch-test your programs":https://gist.github.com/1086477 <span style="float:right; font-size:0.8em">Bash</span>
 
-This script executes one given program with a bunch of input files and compares the output with the solution-files (if given). Very usefull when training for the "Olympiad in Informatics":http://ioinformatics.org/index.shtml, which provides huge testdata for every problem.
+This script executes one given program with a bunch of input files and compares the output with the solution-files (if given). Very useful when training for the "Olympiad in Informatics":http://ioinformatics.org/index.shtml, which provides huge test data for every problem.
 
 "and others!":https://gist.github.com/sebix

@@ -4,10 +4,11 @@ author: sebix
 preview: /img/gallery/thai_bridge-400.jpg
 image: /img/gallery/thai_bridge.jpg
 tags: !gallery!
-width: 400
-height: 602
-top: -101
+width: 200
+height: 300
+top: -50
 left: 0
+date: 2012-12-21, 00:00
 ---
 This image was a lucky shot, made while driving with a open tram through the __Ancient City__, Samuthprakarn, Thailand.
 
